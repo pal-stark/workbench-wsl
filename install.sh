@@ -10,7 +10,7 @@ sudo curl --insecure https://nexus.etalongroup.com/repository/public_crts/ca/Roo
 sudo curl --insecure https://nexus.etalongroup.com/repository/public_crts/ca/SubCA.crt -o /usr/local/share/ca-certificates/SubCA.crt
 sudo update-ca-certificates
 echo install last version of PHP
-sudo apt install -y php-cli php-zip php-pdo php-pgsql php-amqp  php-zip php-zip php-sockets php-mbstring php-curl php-xml php-bcmath php-intl php-gd php-xdebug
+sudo apt install -y php-cli php-zip php-pdo php-pgsql php-amqp  php-zip php-zip php-sockets php-mbstring php-curl php-xml php-bcmath php-intl php-gd php-xdebug ansible
 echo install last version of composer
 sudo apt install composer -y
 curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.deb.sh' | sudo -E bash && sudo apt install symfony-cli
@@ -31,3 +31,4 @@ sudo apt update
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 sudo usermod -aG docker $USER
 sudo systemctl start docker
+curl -sSf https://get.k0s.sh | sudo sh
