@@ -1,0 +1,5 @@
+127.0.0.1 traefik.localhost
+127.0.0.1 portainer.localhost
+127.0.0.1 dockhand.localhost
+127.0.0.1 rabbitmq.localhost
+127.0.0.1 k0s.localhost
