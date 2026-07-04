@@ -1,0 +1,15 @@
+services:
+    dockhand:
+        image: ghcr.io/dockhand/dockhand:latest
+        container_name: dockhand
+        restart: unless-stopped
+        environment:
+        - DOCKHAND_API_KEY=${DOCKHAND_API_KEY}
+        - DOCKHAND_API_URL=${DOCKHAND_API_URL}
+        - DOCKHAND_LOG_LEVEL=info
+        volumes:
+        - ./dockhand:/app/dockhand
+        - ./config:/app/config
+        - ./logs:/app/logs
+        ports:
+        - "8081:8080"
